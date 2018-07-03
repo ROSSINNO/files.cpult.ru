@@ -2,29 +2,70 @@
 <html>
     <head>
         <title>ЦЕНТРАЛЬНЫЙ ПУЛЬТ</title>
-        <meta charset="utf-8" />
-        <style>
-        </style>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     </head>
     <body>
 
-      <h2 style="padding-left: 90px;"><span style="color: #006aaf;"><strong>ЦЕНТРАЛЬНЫЙ ПУЛЬТ</strong></span></h2>
-      <p style="padding-left: 90px;"><em>Российский программный продукт</em></p>
-      <p style="padding-left: 90px;">&nbsp;</p>
-      <p style="padding-left: 90px;">Программный комплекс &laquo;Центральный пульт&raquo; предназначен для эксплуатации, описания и оперативного анализа информационных, телекоммуникационных и смешанных инфраструктур, информационных потоков, процессов и услуг. Интерфейс программного комплекса отражает изменения состояний элементов инфраструктуры в режиме реального времени и формирует статистическую картину контролируемых параметров.</p>
-      <p style="padding-left: 90px;">Программный комплекс сохраняет историю состояний и показателей, формирует уведомления в соответствии с заданными параметрами. Накапливаемые данные организованы в подсистемы хранения, позволяющие использовать механизмы аналитики больших объемов данных (Data Science) штатными или привлекаемыми экспертами. Позволяет контролировать бизнес-процессы, служит инструментом реагирования для оперативных дежурных, специалистов и руководителей различного уровня. Программный комплекс выполнен в модульной архитектуре, допускающей наращивание функциональности и производительности для решения задач сопровождения инфраструктур. Открытость архитектуры и программных интерфейсов делают систему &laquo;Центральный Пульт&raquo; совместимой с любыми уже используемыми информационными системами и формируют возможность встраивания витрин данных и визуальных компонент в корпоративные порталы и в системы обслуживания клиентов. Разграничение и разделение прав доступа позволяет обогатить набор услуг оператора &mdash; позволить конечным пользователям, корпоративным клиентам и контрагентам отслеживать работу подконтрольных активов.</p>
-      <p style="padding-left: 90px;">&nbsp;</p>
-      <p style="padding-left: 90px;"><a href="http://cpult.ru/ASCP_General_System_Description.pdf">Общее описание платформы "Центральный Пульт"</a></p>
-      <p style="padding-left: 90px;"><a href="http://cpult.ru/ASCP_List_of_Output_Data_and_Documents.pdf">Состав выходных данных и документов платформы "Центральный Пульт"</a></p>
-      <p style="padding-left: 90px;"><a href="http://cpult.ru/ASCP_Description_of_Automated_Functions.pdf">Описание автоматизируемых функций платформы "Центральный Пульт"</a></p>
-      <p style="padding-left: 90px;"><a href="http://cpult.ru/ASCP_Admin_Guide.pdf">Руководство администратора платформы "Центральный Пульт"</a></p>
-      <p style="padding-left: 90px;"><a href="http://cpult.ru/ASCP_Benchmark1.pdf">&laquo;Центральный Пульт&raquo; тесты производительности</a></p>
-      <p style="padding-left: 90px;">&nbsp;</p>
-      <p style="padding-left: 90px;">&nbsp;</p>
-      <p style="padding-left: 90px;">Центральный Пульт - в <a href="ReestrSW.png">Реестре отечественного программного обеспечения</a></p>
-      <p style="padding-left: 90px;">&nbsp;</p>
-      <p style="padding-left: 90px;">&nbsp;</p>
+<!-- 
+<nav class="navbar fixed-top navbar-light bg-light">
+  <a class="navbar-brand" href="#">Fixed top</a>
+</nav> -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#"> <span class="sr-only">(current)</span></a>
+            </li>
+<!-- 
+            <li class="nav-item">
+              <a class="nav-link" href="#">Функциональность</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Цены</a>
+            </li>
+ -->            
+            <li class="nav-item">
+              <a class="nav-link" href="https://reestr.minsvyaz.ru/reestr/93422/?sphrase_id=124518">В Реестре отечественного ПО</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Документация
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="ASCP_General_System_Description.pdf">Общее описание</a>
+                <a class="dropdown-item" href="ASCP_List_of_Output_Data_and_Documents.pdf">Состав выходных данных и документов</a>
+                <a class="dropdown-item" href="ASCP_Description_of_Automated_Functions.pdf">Описание автоматизируемых функций </a>
+                <a class="dropdown-item" href="ASCP_Admin_Guide.pdf">Руководство администратора</a>
+                <a class="dropdown-item" href="ASCP_Benchmark1.pdf">Тесты производительности</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>      
+
+      <div class="container">
+        <div class="card border-primary">
+            <div class="card-header">
+              Российский программный продукт
+            </div>
+          <div class="card-body">
+            <h1 class="card-title">ЦЕНТРАЛЬНЫЙ ПУЛЬТ</h1>
+            <p class="card-text" style="text-align: justify;">Программный комплекс &laquo;Центральный пульт&raquo; предназначен для эксплуатации, описания и оперативного анализа информационных, телекоммуникационных и смешанных инфраструктур, информационных потоков, процессов и услуг. Интерфейс программного комплекса отражает изменения состояний элементов инфраструктуры в режиме реального времени и формирует статистическую картину контролируемых параметров.</p>
+            <p class="card-text" style="text-align: justify;">Программный комплекс сохраняет историю состояний и показателей, формирует уведомления в соответствии с заданными параметрами. Накапливаемые данные организованы в подсистемы хранения, позволяющие использовать механизмы аналитики больших объемов данных (Data Science) штатными или привлекаемыми экспертами. Позволяет контролировать бизнес-процессы, служит инструментом реагирования для оперативных дежурных, специалистов и руководителей различного уровня. Программный комплекс выполнен в модульной архитектуре, допускающей наращивание функциональности и производительности для решения задач сопровождения инфраструктур. Открытость архитектуры и программных интерфейсов делают систему &laquo;Центральный Пульт&raquo; совместимой с любыми уже используемыми информационными системами и формируют возможность встраивания витрин данных и визуальных компонент в корпоративные порталы и в системы обслуживания клиентов. Разграничение и разделение прав доступа позволяет обогатить набор услуг оператора &mdash; позволить конечным пользователям, корпоративным клиентам и контрагентам отслеживать работу подконтрольных активов.</p>
+          </div>
+        </div>
+      </div>
 
 
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     </body>
 </html>
