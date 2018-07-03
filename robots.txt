@@ -1,4 +1,0 @@
-User-Agent: *
-Disallow:
-Sitemap: http://cpult.tilda.ws/sitemap.xml
-Host: cpult.tilda.ws
