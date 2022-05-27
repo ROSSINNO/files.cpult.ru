@@ -1,76 +1,305 @@
 
+<!doctype html>
+
+<html>
+
+    <head>
+
+        <title>ЦЕНТРАЛЬНЫЙ ПУЛЬТ</title>
+
+        <meta charset="utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 
-Конфигурации для демонстраций, тестирования и пилотных проектов. 
 
+        <style type="text/css">
 
-<h2>Конфигурация 1X</h2>
+          .f { margin-bottom:  0; }
 
-Для проведения демонстрации на ваших мощностях можно обойтись одной виртуальной машиной
+          .footer { margin-top: 1em; }
 
-<pre>
-64-bit OS — семейство Linux OS, Ubuntu Server 20.04 предпочтительно, можно Астра Линукс Орел
-CPU — 8 cores
-RAM — 16 GB
-Disk — 150 GB
-</pre>
+          @media (min-width: 680px) {
 
-Нам потребуется дистанционный доступ SSH, HTTP/HTTP(s), Web-Socket/Web-Socket(s) к ней. 
-Порты 22/TCP, 80/TCP, 443/TCP, 8091/TCP. 
+            .card-text { text-align: justify; }
 
+          }
 
-<h2>Конфигурация 2X</h2>
+          .tab-content {     margin-top: 2em; }
 
-Для определенного сорта пилотных проектов может быть рекомендована более устойчивая конфигурация из двух вычислительных машин. 
+/*          #info { display: block; }
 
-<pre>
-SAYMON (программный комплекс "Центральный Пульт”)
-64-bit OS — семейство Linux OS, Ubuntu Server 20.04 предпочтительно, Astra-Linux Орел тоже можно
-CPU — 8 cores
-RAM — 16 GB
-HDD — 100 GB
+          #contact { display: none; }*/
 
-Под БД рекомендуется отдельную машину 
-64-bit OS —семейство Linux OS, Ubuntu Server 20.04 предпочтительно, Astra-Linux Орел тоже можно
-CPU — 8 cores
-RAM — 16 GB
-SSD — 150 GB
-</pre>
-
-<h2>Конфигурация 3X</h2>
-
-Для проектов, в которых планируется использовать объем дополнительных модулей, рекомендуется вынести модули на отдельную машину. 
-
-<pre>
-MODULE APP 
-64-bit OS — семейство Linux OS, Ubuntu Server 20.04 предпочтительно
-CPU — 2 cores
-RAM — 4 GB
-HDD — 50 GB
-
-SAYMON APP 
-64-bit OS — семейство Linux OS, Ubuntu Server 20.04 предпочтительно
-CPU — 8 cores
-RAM — 16 GB
-HDD — 100 GB
-
-БД
-64-bit OS —семейство Linux OS, Ubuntu Server 20.04 предпочтительно
-CPU — 8 cores
-RAM — 16 GB
-SSD — 150 GB
-</pre>
-
-
-<h2>Иные конфигурации</h2>
-
-Конкретные конфигурации для развертывания в рамках пилотных или коммерческих проектов - предмет планирования. <br>
-Наш программный комплекс, построен на компонентах, которые прекарсно работают в контейнерной среде. <br>
-Сборки в контейнерах доступны для апробации, просьба обращаться для организации потсавки. <br>
+          .hubspot-link__container { display: none; }
 
 
 
 
+
+          .hs-button {
+
+              background-color: #006AAF !important;
+
+              border-color: #FFFFFF;
+
+          }
+
+          .nav-link.active {
+
+              background-color: #006AAF;
+
+          }
+
+        </style>
+
+
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    </head>
+
+    <body>
+
+
+
+<!-- 
+
+<nav class="navbar fixed-top navbar-light bg-light">
+
+  <a class="navbar-brand" href="#">Fixed top</a>
+
+</nav> -->
+
+      <nav class="navbar navbar-expand-lg navbar-light ">
+
+        <a class="navbar-brand" href="#"></a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="menu">
+
+          <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+
+          <ul class="nav nav-pills" role="tablist" id="myTab">  
+
+            <li class="nav-item ">
+
+              <a class="nav-link active" id="info-tab" href="#info" data-toggle="tab" role="tab" aria-controls="info" aria-selected="true">Общая информация</a>
+
+            </li>  
+
+
+
+            <li class="nav-item dropdown">
+
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+                Документация
+
+              </a>
+
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+
+                <a class="dropdown-item" href="ASCP_General_System_Description.pdf">Общее описание</a>
+
+                <a class="dropdown-item" href="ASCP_List_of_Output_Data_and_Documents.pdf">Состав выходных данных и документов</a>
+
+                <a class="dropdown-item" href="ASCP_Description_of_Automated_Functions.pdf">Описание автоматизируемых функций </a>
+
+                <a class="dropdown-item" href="ASCP_Admin_Guide.pdf">Руководство администратора</a>
+
+                <a class="dropdown-item" href="ASCP_User_Guide.pdf">Руководство пользователя</a>                  
+
+                <a class="dropdown-item" href="ASCP_Benchmark1.pdf">Тесты производительности</a>
+
+                <a class="dropdown-item" href="https://cpult.ru/programmy-obucheniya">Программы обучения</a>
+
+              </div>
+
+            </li>
+
+            <li class="nav-item">
+
+              <a class="nav-link" href="https://reestr.digital.gov.ru/reestr/303529/">Запись в реестре</a>
+
+            </li>            
+
+            <li class="nav-item">
+
+              <a class="nav-link" id="contact-tab" href="#contact" data-toggle="tab" role="tab" aria-controls="contact" aria-selected="false">Контакт</a>
+
+            </li>            
+
+          </ul>
+
+        </div>
+
+      </nav>      
+
+
+
+      <div class="tab-content" id="myTabContent">
+
+        <div class="container tab-pane fade show active" id="info" role="tabpanel" aria-labelledby="info-tab">
+
+          <div class="card border-primary">
+
+              <div class="card-header">
+
+                Российский программный продукт
+
+              </div>
+
+            <div class="card-body">
+
+              <h1 class="card-title">ЦЕНТРАЛЬНЫЙ ПУЛЬТ</h1>
+
+              <p class="card-text">Программный комплекс &laquo;Центральный пульт&raquo; предназначен для эксплуатации, описания и оперативного анализа информационных, телекоммуникационных и смешанных инфраструктур, информационных потоков, процессов и услуг. Интерфейс программного комплекса отражает изменения состояний элементов инфраструктуры в режиме реального времени и формирует статистическую картину контролируемых параметров.</p>
+
+              <p class="card-text">Программный комплекс сохраняет историю состояний и показателей, формирует уведомления в соответствии с заданными параметрами. Накапливаемые данные организованы в подсистемы хранения, позволяющие использовать механизмы аналитики больших объемов данных (Data Science) штатными или привлекаемыми экспертами. Позволяет контролировать бизнес-процессы, служит инструментом реагирования для оперативных дежурных, специалистов и руководителей различного уровня. Программный комплекс выполнен в модульной архитектуре, допускающей наращивание функциональности и производительности для решения задач сопровождения инфраструктур. Открытость архитектуры и программных интерфейсов делают систему &laquo;Центральный Пульт&raquo; совместимой с любыми уже используемыми информационными системами и формируют возможность встраивания витрин данных и визуальных компонент в корпоративные порталы и в системы обслуживания клиентов. Разграничение и разделение прав доступа позволяет обогатить набор услуг оператора &mdash; позволить конечным пользователям, корпоративным клиентам и контрагентам отслеживать работу подконтрольных активов.</p>
+
+            </div>
+
+          </div>
+
+
+
+        </div>
+
+        <div class="container  tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+
+          <div class="card border-primary">
+
+              <div class="card-header">
+
+                  Запросите информацию по <a href="mailto:welcome@rossinno.biz">электронной почте</a>
+
+              </div>
+
+            <div class="card-body">          
+
+              <h1 class="card-title">Конфигурации</h1>
+
+              <p class="card-text" style="margin-top:2em;">
+
+                    Конфигурации для демонстраций, тестирования и пилотных проектов. 
+
+
+                    <h2>Конфигурация 1X</h2>
+
+                    Для проведения демонстрации на ваших мощностях можно обойтись одной виртуальной машиной
+
+                    <pre>
+                    64-bit OS — семейство Linux OS, Ubuntu Server 20.04 предпочтительно, можно Астра Линукс Орел
+                    CPU — 8 cores
+                    RAM — 16 GB
+                    Disk — 150 GB
+                    </pre>
+
+                    Нам потребуется дистанционный доступ SSH, HTTP/HTTP(s), Web-Socket/Web-Socket(s) к ней. 
+                    Порты 22/TCP, 80/TCP, 443/TCP, 8091/TCP. 
+
+
+                    <h2>Конфигурация 2X</h2>
+
+                    Для определенного сорта пилотных проектов может быть рекомендована более устойчивая конфигурация из двух вычислительных машин. 
+
+                    <pre>
+                    SAYMON (программный комплекс "Центральный Пульт”)
+                    64-bit OS — семейство Linux OS, Ubuntu Server 20.04 предпочтительно, Astra-Linux Орел тоже можно
+                    CPU — 8 cores
+                    RAM — 16 GB
+                    HDD — 100 GB
+
+                    Под БД рекомендуется отдельную машину 
+                    64-bit OS —семейство Linux OS, Ubuntu Server 20.04 предпочтительно, Astra-Linux Орел тоже можно
+                    CPU — 8 cores
+                    RAM — 16 GB
+                    SSD — 150 GB
+                    </pre>
+
+                    <h2>Конфигурация 3X</h2>
+
+                    Для проектов, в которых планируется использовать объем дополнительных модулей, рекомендуется вынести модули на отдельную машину. 
+
+                    <pre>
+                    MODULE APP 
+                    64-bit OS — семейство Linux OS, Ubuntu Server 20.04 предпочтительно
+                    CPU — 2 cores
+                    RAM — 4 GB
+                    HDD — 50 GB
+
+                    SAYMON APP 
+                    64-bit OS — семейство Linux OS, Ubuntu Server 20.04 предпочтительно
+                    CPU — 8 cores
+                    RAM — 16 GB
+                    HDD — 100 GB
+
+                    БД
+                    64-bit OS —семейство Linux OS, Ubuntu Server 20.04 предпочтительно
+                    CPU — 8 cores
+                    RAM — 16 GB
+                    SSD — 150 GB
+                    </pre>
+
+
+                    <h2>Иные конфигурации</h2>
+
+                    Конкретные конфигурации для развертывания в рамках пилотных или коммерческих проектов - предмет планирования. <br>
+                    Наш программный комплекс, построен на компонентах, которые прекрасно работают в контейнерной среде. <br>
+                    Сборки в контейнерах доступны для апробации, просьба обращаться для организации поставки. <br>
+
+
+
+
+
+              </p>     
+
+            </div>
+
+        </div>
+
+      </div>
+
+
+      <footer class="footer" style="text-align: right;"">
+
+        <div class="container">
+
+          <span class="text-muted" style="font-size: 0.6em;">
+
+            <p class="f">&copy; 2012-2022, ООО "<a href='https://rossinno.biz'>РОССИННО</a>"</p>
+
+            <p class="f">197022, Санкт-Петербург, набережная реки Карповки, дом 5</p>
+
+            <p class="f"><a href="mailto:welcome@rossinno.biz">welcome@rossinno.biz</a></p>
+
+            <p class="f">+78123099885</p>
+
+          </span>
+
+        </div>
+
+      </footer>
+
+
+
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+
+
+
+    </body>
+
+</html>
 
 
 
